@@ -1,2 +1,10 @@
 node_modules/
 .idea/
+Temp/
+Library/
+/*.sln
+Unity3D/UnityAndTessel/Assets/*.meta
+Unity3D/UnityAndTessel/ProjectSettings/*
+Unity3D/UnityAndTessel/Assets/DZBZ_ClickGameObject/*.meta
+Unity3D/UnityAndTessel/*.csproj
+Unity3D/UnityAndTessel/*.sln

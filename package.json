@@ -11,5 +11,11 @@
     "Tessel"
   ],
   "license": "MIT",
-  "readme": "A bare bones Tessel 2 blinky script."
+  "readme": "A bare bones Tessel 2 blinky script.",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "swig": "^1.4.2"
+  }
 }
