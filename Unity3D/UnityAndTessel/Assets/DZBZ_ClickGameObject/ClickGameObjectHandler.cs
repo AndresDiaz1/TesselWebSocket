@@ -8,6 +8,7 @@ public class ClickGameObjectHandler : MonoBehaviour {
 
 
 	void Start () {
+		InvokeRepeating("Example", 3, 1F);
 	}
 
     public void OnClickedObject(GameObject obj)
@@ -19,14 +20,14 @@ public class ClickGameObjectHandler : MonoBehaviour {
         if (rb)
         {
             rb.AddForce(transform.up * 5F, ForceMode.Impulse);
-			StartCoroutine(GetText());
+			//StartCoroutine(GetLED());
         }
         else Debug.LogError("no rigid body on clicked object name=" + obj.name);
     }
 
-	IEnumerator GetText()
+	IEnumerator GetTemperature()
 	{
-		string url = "http://192.168.0.7:8080/leds/0";
+		string url = "http://192.168.0.7:8080/analog";
 		UnityWebRequest www = UnityWebRequest.Get (url);
 		yield return www.Send();
 
@@ -43,6 +44,10 @@ public class ClickGameObjectHandler : MonoBehaviour {
 	}
 
 
+
+	void Example() {
+		StartCoroutine(GetTemperature());
+	}
 
 
     void Awake()
